@@ -1,15 +1,5 @@
 .resume {
     padding-top: 120px;
-    &__title {
-        position: relative;
-        text-align: center;
-        @include before_circle;
-        &:before {
-            top: -6px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
     &__subtitle {
         text-align: center;
     }
@@ -39,6 +29,7 @@
             list-style-type: none;
             li {
                 position: relative;
+                margin-top: 15px;
                 &:after {
                     content: '';
                     width: 1px;
