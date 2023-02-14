@@ -312,7 +312,7 @@ template {
 .title {
   font-weight: bold;
   font-size: 36px;
-  line-height: 60px;
+  line-height: 50px;
 }
 .title_fz14 {
   font-size: 14px;
@@ -364,11 +364,11 @@ template {
   min-height: 100vh;
   position: relative;
   background: url("../img/main_bg.jpg") no-repeat 57%/cover;
-  padding-top: 205px;
+  padding-top: 100px;
 }
 .promo__descr {
   position: absolute;
-  right: 3vw;
+  right: 5vw;
   color: #000000;
 }
 .promo__title {
@@ -433,8 +433,12 @@ template {
   height: 340px;
   z-index: 3;
 }
+.sidepanel__link svg path {
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
 .sidepanel__link:hover svg path {
-  fill: red;
+  fill: #FFA501;
 }
 .sidepanel__divider {
   width: 2px;
@@ -446,8 +450,10 @@ template {
   width: 25px;
 }
 .sidepanel__text span {
-  -webkit-transform: rotate(-90deg) translate(-30%, -260%);
-          transform: rotate(-90deg) translate(-30%, -260%);
+  color: #000000;
+  font-size: 13px;
+  -webkit-transform: rotate(-90deg) translate(-40%, -330%);
+          transform: rotate(-90deg) translate(-40%, -330%);
   display: block;
   width: 150px;
 }

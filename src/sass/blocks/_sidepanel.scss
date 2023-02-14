@@ -1,3 +1,5 @@
+@import '../base/variables';
+
 .sidepanel {
     position: fixed;
     top: 230px;
@@ -9,9 +11,12 @@
     height: 340px;
     z-index: 3;
     &__link {
+        & svg path {
+            transition: all 0.4s linear;
+        }
         &:hover {
             svg path {
-                fill: red;
+                fill: $main-color;
             }
         }
     }
@@ -24,7 +29,9 @@
         height: 150px;
         width: 25px;
         span {
-            transform: rotate(-90deg) translate(-30%, -260%);
+            color: #000000;
+            font-size: 13px;
+            transform: rotate(-90deg) translate(-40%, -330%);
             display: block;
             width: 150px;
         }
