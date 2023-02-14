@@ -3,6 +3,11 @@
     position: relative;
     background: url('../img/main_bg.jpg') no-repeat 57%/cover;
     padding-top: 205px;
+    &__descr {
+        position: absolute;
+        right: 3vw;
+        color: #000000;
+    }
     &__title {
         margin-top: 10px;
         width: 540px;
