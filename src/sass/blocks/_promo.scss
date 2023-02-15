@@ -2,19 +2,21 @@
     min-height: 100vh;
     position: relative;
     background: url('../img/main_bg.jpg') no-repeat 57%/cover;
-    padding-top: 100px;
+    padding-top: 250px;
     &__descr {
         position: absolute;
         right: 5vw;
-        color: #000000;
+        color: #fff;
     }
     &__title {
         margin-top: 10px;
         width: 540px;
+        text-shadow: 1px 1px 1px #000000;
     }
     &__subtitle {
         position: relative;
         padding-left: 10px;
+        text-shadow: 1px 1px 1px #000000;
         z-index: 2;
         @include before_circle;
     }
@@ -26,11 +28,19 @@
         justify-content: space-between;
     }
     &__link {
-        color: #000000;
+        color: #fff;
         font-weight: bold;
+        height: 45px;
+        text-decoration: none;
+        padding: 12px 25px;
+        text-shadow: 1px 1px 1px #000000;
+        cursor: pointer;
+        transition: all 0.3s;
         &:hover {
-            color: #000000;
+            color: #fff;
             text-decoration: none;
+            background: $main-color;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         }
     }
 }

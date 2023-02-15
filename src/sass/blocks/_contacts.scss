@@ -1,3 +1,5 @@
+@import '../base/variables';
+
 .contacts {
     padding: 120px 0 90px 0;
     &__wrapper {
@@ -30,9 +32,22 @@
     }
     &__link {
         margin-right: 25px;
-        img {
-            max-width: 30px;
-            max-height: 30px;
+        width: 30px;
+        height: 30px;
+        text-decoration: none;
+        svg {
+            overflow: visible;
+            width: 30px;
+            height: 30px;
+        }
+        & svg path {
+            transition: all 0.4s linear;
+        }
+        &:hover {
+            text-decoration: none;
+            svg path {
+                fill: $main-color;
+            }
         }
     }
     &__form {
@@ -95,4 +110,6 @@
         font-size: 14px;
         line-height: 21px;
     }
+    
 }
+

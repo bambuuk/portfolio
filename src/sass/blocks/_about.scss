@@ -59,4 +59,10 @@
             line-height: 18px;
         }
     }
+    &__circle {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color: red;
+    }
 }
