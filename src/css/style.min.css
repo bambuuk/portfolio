@@ -899,15 +899,88 @@ template {
   grid-column: 2/4;
 }
 .portfolio__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border: 2px solid black;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
+  overflow: hidden;
+  position: relative;
 }
 .portfolio__item img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  opacity: 1;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+.portfolio__item__desr {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  padding: 10px 10px 20px 10px;
+  width: 280px;
+  height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: -webkit-gradient(linear, left top, right top, from(#ee7752), color-stop(#e73c7e), color-stop(#23a6d5), to(#d52385));
+  background: linear-gradient(90deg, #ee7752, #e73c7e, #23a6d5, #d52385);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 10s infinite ease-in-out;
+          animation: gradient 10s infinite ease-in-out;
+  color: black;
+}
+.portfolio__item__title {
+  font-weight: 600;
+  text-align: center;
+  font-size: 25px;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #ffffff;
+}
+.portfolio__item__divider {
+  margin: 10px auto;
+  border-radius: 10px;
+  background-color: black;
+  height: 2px;
+  width: 260px;
+  -webkit-box-shadow: 0 0 4px #ffffff;
+          box-shadow: 0 0 4px #ffffff;
+}
+.portfolio__item__shortDescr {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+.portfolio__item__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.portfolio__item__links a {
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px 1px #ffffff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio__item__links a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: rgb(233, 248, 30);
+  text-shadow: 1px 1px 1px #000000;
 }
 
 .contacts {

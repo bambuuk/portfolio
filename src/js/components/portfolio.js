@@ -1,43 +1,70 @@
 function portfolio() {
-  const promoBtns = document.querySelectorAll('.promo__btns');
-  const promoLinks = document.querySelectorAll('.promo__link');
+  const cardDescr = document.querySelectorAll('.portfolio__item__desr'); 
+  const cardShortDescr = document.querySelectorAll('.portfolio__item__shortDescr');
+  const cardWrapper = document.querySelector('.portfolio__wrapper');
+  const cardItems = document.querySelectorAll('.portfolio__item');
+  const cardImgs = document.querySelectorAll('.portfolio__item__img');
 
-  function setActiceBtn(a) {
-    // let i = [...promoLinks].indexOf(a);
+  let elemI = null;
 
-    // console.log(i);
+  cardShortDescr.forEach(item => {
+    if (item.textContent.length > 400) {
+      let str = item.textContent;
+      item.textContent = str.slice(0, 300) + ' ...';
+    }
+  });
 
-    // portfolioProjects.forEach(a => {
-    //   a.classList.remove("activeProject");
+  function changeVisibleInfo (item, event) {
+    let target = event.target;
+    let eventType = event.type;
+    
+    if (eventType === 'mouseenter') {
+      elemI = [...cardItems].indexOf(target);
 
-    //   if ([...portfolioProjects].indexOf(a) === i) {
-    //     a.classList.add("activeProject");
-    //   }
-    // })
+      cardImgs.forEach(item => {
+        if(item === cardImgs[elemI]) {
+          item.style.visibility = 'hidden';
+          item.style.opacity = 0;
+        }
+      });
 
-    // promoBtns.forEach(a => {
-    //   a.classList.remove("activeHeading");
+      cardDescr.forEach(item => {
+        if(item === cardDescr[elemI]) {
+          item.style.visibility = 'visible';
+          item.style.opacity = 1;
+        }
+      });
+    } else if (eventType === 'mouseleave') {
 
-    //   if ([...portfolioHeadings].indexOf(a) === i) {
-    //     a.classList.add("activeHeading");
-    //   }
-    // })
+      cardDescr.forEach(item => {
+        if(item === cardDescr[elemI]) {
+          item.style.visibility = 'hidden';
+          item.style.opacity = 0;
+        }
+      }); 
+
+      cardImgs.forEach(item => {
+        if(item === cardImgs[elemI]) {
+          item.style.visibility = 'visible';
+          item.style.opacity = 1;
+        }
+      });
+
+      elemI = null;
+    }
   }
 
-  // promoBtns.forEach(a => {
-  //   a.addEventListener("mouseover", () => setActiceBtn(a));
-  // })
-  // promoBtns.forEach(a => {
-  //   a.addEventListener("mouseout", () => setActiceBtn(a));
-  // })
+  cardItems.forEach(item => {
+    item.addEventListener('mouseenter', (event) => changeVisibleInfo(item, event));
+  })
+  cardItems.forEach(item => {
+    item.addEventListener('mouseleave', (event) => changeVisibleInfo(item, event));
+  })
 
-  // promoBtns.addEventListener('mouseover', (event) => {
-  //   console.dir(event.target);
-  // });
+  
 
-  // promoBtns.addEventListener('mouseout', (event) => {
-  //   console.log(event.target);
-  // });
+
+
 
 
 
