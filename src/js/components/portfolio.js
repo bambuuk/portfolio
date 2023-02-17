@@ -1,7 +1,6 @@
 function portfolio() {
   const cardDescr = document.querySelectorAll('.portfolio__item__desr'); 
   const cardShortDescr = document.querySelectorAll('.portfolio__item__shortDescr');
-  const cardWrapper = document.querySelector('.portfolio__wrapper');
   const cardItems = document.querySelectorAll('.portfolio__item');
   const cardImgs = document.querySelectorAll('.portfolio__item__img');
 
@@ -52,24 +51,14 @@ function portfolio() {
 
       elemI = null;
     }
-  }
+  };
 
   cardItems.forEach(item => {
     item.addEventListener('mouseenter', (event) => changeVisibleInfo(item, event));
-  })
+  });
   cardItems.forEach(item => {
     item.addEventListener('mouseleave', (event) => changeVisibleInfo(item, event));
-  })
-
-  
-
-
-
-
-
-
-
-
+  });
 }
 
 export default portfolio;

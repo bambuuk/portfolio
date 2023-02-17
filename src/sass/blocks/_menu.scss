@@ -1,5 +1,7 @@
+@import '../base/variables';
+
 .hamburger {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 30px;
     height: 21px;
@@ -13,7 +15,7 @@
         display: block;
         width: 30px;
         height: 3px;
-        background: #151812;
+        background: $main-color;
     }
 
     span.long {
