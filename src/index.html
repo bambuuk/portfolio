@@ -30,10 +30,11 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
-    <aside class="sidepanel">
+    <aside class="sidepanel" data-aos="zoom-out" data-aos-once="true">
         <a href="https://github.com/bambuuk" target="_blank" class="sidepanel__link">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path
@@ -104,7 +105,7 @@
             <span></span>
         </div>
         <div class="container">
-            <div class="promo__descr">
+            <div class="promo__descr" data-aos="zoom-out" data-aos-once="true">
                 <div class="title title_fz16 promo__subtitle">My name is Ivan Korobka</div>
                 <h1 class="title title_fz36 promo__title">Hello! I'm a front-end developer from Kropyvnytskyi</h1>
                 <div class="promo__btns">
@@ -115,7 +116,7 @@
         </div>
     </section>
 
-    <section class="resume" id="experiecnce">
+    <section class="resume" data-aos="zoom-out" data-aos-once="true" id="experiecnce">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Experience</h2>
             <div class="title title_fz36 title__section-subtitle">How will I be useful</div>
@@ -201,7 +202,7 @@
         </div>
     </section>
 
-    <section class="skills" id="skills">
+    <section class="skills" id="skills" data-aos="zoom-out" data-aos-once="true">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Skills</h2>
             <div class="title title_fz36 title__section-subtitle">What I use in my work</div>
@@ -259,7 +260,7 @@
         </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="portfolio" data-aos="zoom-out" data-aos-once="true">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Portfolio</h2>
             <div class="title title_fz36 title__section-subtitle">My projects</div>
@@ -459,7 +460,7 @@
         </div>
     </section>
 
-    <div class="contacts" id="contacts">
+    <div class="contacts" id="contacts" data-aos="zoom-out" data-aos-once="true">
         <div class="container">
             <div class="contacts__wrapper">
                 <div class="contacts__photo">
@@ -509,6 +510,10 @@
         </div>
 
         <script type="module" src="js/script.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
 </body>
 
 </html>
