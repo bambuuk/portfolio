@@ -109,11 +109,6 @@
             grid-template-rows: 400px 1fr;
             row-gap: 20px;
         }
-        &__photo {
-            img {
-                width: 75%;
-            }
-        }
     }
 } 
 
@@ -268,9 +263,6 @@
         }
     }
     .contacts {
-        &__photo {
-            display: none;
-        }
         &__form {
             grid-template: 45px 45px 190px 101px 33px / 1fr;
         }

@@ -5,8 +5,9 @@
     &__wrapper {
         padding: 0 35px 0 52px;
         display: grid;
-        grid-template-columns: 400px 585px;
-        justify-content: space-between;
+        grid-template-columns: minmax(auto, 400px) minmax(auto, 585px);
+        column-gap: 20px;
+        justify-content: center;
     }
     &__photo {
         img {

@@ -489,6 +489,7 @@ template {
       -ms-flex-align: end;
           align-items: flex-end;
   cursor: pointer;
+  z-index: 50;
 }
 .hamburger span {
   display: block;
@@ -894,10 +895,13 @@ template {
 .contacts__wrapper {
   padding: 0 35px 0 52px;
   display: grid;
-  grid-template-columns: 400px 585px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  grid-template-columns: minmax(auto, 400px) minmax(auto, 585px);
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .contacts__photo img {
   width: 100%;
@@ -1020,22 +1024,6 @@ template {
   line-height: 21px;
 }
 
-.pageup {
-  opacity: 0;
-  position: fixed;
-  bottom: 7%;
-  right: 3%;
-  z-index: 30;
-  cursor: pointer;
-  -webkit-transition: 1s all;
-  transition: 1s all;
-}
-
-.up {
-  height: 50px;
-  width: 50px;
-}
-
 @media (max-width: 1439px) {
   .sidepanel {
     display: none;
@@ -1148,9 +1136,6 @@ template {
     grid-template-columns: 1fr;
     grid-template-rows: 400px 1fr;
     row-gap: 20px;
-  }
-  .contacts__photo img {
-    width: 75%;
   }
 }
 @media (max-width: 768px) {
@@ -1294,9 +1279,6 @@ template {
   .price__wrapper ul {
     margin-top: 30px;
     grid-template-columns: 1fr;
-  }
-  .contacts__photo {
-    display: none;
   }
   .contacts__form {
     grid-template: 45px 45px 190px 101px 33px/1fr;
