@@ -720,14 +720,18 @@ template {
   min-height: 270px;
   border: 1px solid #000000;
 }
-.skills__list__item img {
-  margin-bottom: 20px;
-}
 .skills__list__text {
   margin-top: 15px;
   font-size: 12px;
   line-height: 18px;
   color: #000000;
+}
+.skills__list__icon {
+  margin-bottom: 20px;
+  width: 64px;
+  height: 64px;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .skills__scales {
   display: grid;

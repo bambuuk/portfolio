@@ -13,15 +13,18 @@
             width: 270px;
             min-height: 270px;
             border: 1px solid #000000;
-            img {
-                margin-bottom: 20px;
-            }
         }
         &__text {
             margin-top: 15px;
             font-size: 12px;
             line-height: 18px;
             color: #000000;
+        }
+        &__icon {
+            margin-bottom: 20px;
+            width: 64px;
+            height: 64px;
+            object-fit: fill;
         }
     }
     &__scales {
